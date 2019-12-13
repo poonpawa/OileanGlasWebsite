@@ -14,14 +14,17 @@ body, ul{
     height: 200px;
     background-color: #ECCFD8;
     width: auto;
+    z-index: 0;
 }
 
 .logoTop {
     padding: 15px;
+    z-index: 0;
 }
 
 .logo {
     padding: 10px;
+    z-index: 0;
 }   
 
 nav {
@@ -30,6 +33,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 0;
 }
 
 .mob {
@@ -42,6 +46,12 @@ nav {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;   
+}
+
+.navContents .active {
+    background-color: #83D7D0;
+    border-radius: 40px;
+    height: 65px;
 }
 
 ul {
@@ -66,6 +76,181 @@ ul {
     text-decoration: none;
     color: #FF2965;
 }
+
+.firstPhotoSection {
+    height: 798px;
+}
+
+.firstPhotoSection img {
+    z-index: -1;
+    top: -10px;
+    width: 100%;
+}
+
+.secondServicesSection {
+    height: 570px;
+    z-index: 0;
+    background-color: #1C2253;
+    display: flex;
+}
+.onlineShop {
+    display: flex;
+    flex: 1;
+}
+
+.caterEvents {
+    display: flex;
+    flex: 1;
+}
+
+.iconImage {
+    height: 284px;
+    padding: 134px 0 0 100px;
+    
+}
+
+.rightSection {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0px;
+    margin-left: 50px;
+}
+
+.themeButton {
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    height: 66px;
+    font-family: Inedita;
+    font-size: 54px;
+    border-radius: 40px;
+    flex: none;
+}
+
+.button1 {
+    background-color: #ECCFD8;
+    color: #1C2253;
+}
+
+.button2 {
+    background-color: #1C2253;
+    color: white;
+}
+
+.size1 {
+    width: 224px;
+}
+
+.size2 {
+    width: 342px;
+}
+
+.theme1 {
+    background-color: #ECCFD8;
+}
+
+.theme2 {
+    background-color: #83D7D0;
+}
+
+.theme3 {
+    background-color: #1C2253;
+}
+
+.thirdPromo .headingTitle, .thirdPromo .innerText, .fourthAd .headingTitle  {
+    color: #1C2253;
+}
+
+.headingTitle {
+    font-family: Inedita;
+    font-size: 68px;
+    color: #83D7D0;
+    margin-right: auto;
+    flex: 1;
+}
+
+.innerText {
+    font-family: Quite Good;
+    font-size: 54px; 
+    color: #FF2965;
+    width: 434px;
+    margin-right: auto;
+    flex: 2;
+}
+
+.thirdPromo, .fourthAd, footer{
+    display: flex;
+}
+
+.fourthAd{
+    justify-content: space-between;
+}
+
+.comingSoon {
+    align-self: center;
+}
+
+.fourthAd span {
+    font-family: Inedita;
+    font-size: 100px;
+    align-self: center;
+    color: #1C2253;
+}
+
+footer {
+    height: 563px;
+    padding: 70px 0 0 93px;
+}
+
+.footerTitle {
+    font-family: Inedita;
+    font-size: 68px;
+    color: #FF2965;
+}
+
+.locations, .time, .subscribeSection  {
+    font-family: Quite Good;
+    font-size: 56px;
+    color: #ECCFD8;
+    width: 470px;
+    margin-right: 130px;
+}
+
+.subscribeBtn {
+    color: #534D4E;
+    margin-top: 35px;
+    background-color: #ECCFD8;
+}
+
+.subscribeSection .footerTitle {
+    color: #ECCFD8;
+}
+
+.subscribeSection input::placeholder {
+    color:  #534D4E;
+    font-size: 51px;
+    font-family: Quite Good;
+    text-indent: 25px;
+    opacity: 75%;
+}
+
+.subscribeSection input {
+    border-radius: 40px;
+    width: 528px;
+    height: 66px;
+    background-color: #ECCFD8;
+    margin-top: 35px;
+    font-family: Quite Good;
+    font-size: 51px;
+    color:  #534D4E;
+    
+}
+
+
+
+
 
 @media all and (max-width: 1350px) {
     
