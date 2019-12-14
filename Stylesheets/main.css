@@ -104,7 +104,7 @@ ul {
 }
 
 .iconImage {
-    height: 284px;
+    height: 15rem;
     padding: 134px 0 0 100px;
     
 }
@@ -161,6 +161,11 @@ ul {
 
 .thirdPromo .headingTitle, .thirdPromo .innerText, .fourthAd .headingTitle  {
     color: #1C2253;
+}
+
+.flavoursImage {
+    width: 828px;
+    height: 656px;
 }
 
 .headingTitle {
@@ -238,17 +243,45 @@ footer {
 
 .subscribeSection input {
     border-radius: 40px;
-    width: 528px;
+    width: 500px;
     height: 66px;
     background-color: #ECCFD8;
     margin-top: 35px;
     font-family: Quite Good;
     font-size: 51px;
-    color:  #534D4E;
-    
+    color:  #534D4E;  
 }
 
+.equalDiv {
+    height: 934px;
+    padding: 30px;
+}
 
+.title {
+    font-size: 5rem;
+    font-family: Inedita;
+}
+
+.sectionText {
+    font-size: 2.5rem;
+    font-family: Quite good;
+    width: 50%;
+    margin-top: 2%;
+}
+
+.missionSection, .teamSection {
+    align-items: flex-end;
+    color: #1C2253;
+    display: flex;
+    flex-direction: column;
+}
+
+.journeySection {
+    align-items: flex-start;
+    color: #ECCFD8;
+    display: flex;
+    flex-direction: column;
+}
 
 
 
@@ -282,6 +315,7 @@ footer {
         justify-content: space-around;
         transform: translateY(-80%);
         z-index: -1;
+        display: none;
     }
 
     .topDiv {
@@ -294,7 +328,170 @@ footer {
         height: 120px;
     }
 
+    .firstPhotoSection {
+        height: auto;
+    }
+
+    footer {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        font-size: 2rem;
+        height: auto;
+        padding: 70px 0 40px 93px;
+    }
+
+    .locations, .time, .subscribeSection {
+        font-size: 2.8rem;
+        margin-top: 5%;
+        width: auto;
+    }
+
+    .secondServicesSection {
+        width: auto;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .rightSection {
+        padding: 50px 0px;
+
+    }
+
+    .headingTitle {
+        font-size: 3rem;
+    }
+
+    .innerText {
+        font-size: 2.5rem;
+    }
+
+    .iconImage {
+        height: 10rem;
+        padding: 80px 0 0 80px;
+    }
+
+    .thirdPromo img {
+        display: none;
+    }
+
+    .fourthAd {
+        display: inline-flex;
+        position: relative;
+    }
+
+    .comingSoon {
+        position: absolute;
+        top: 75%;
+        right: 5%;
+        height: 10rem;
+    }
+
+    .fourthAd span {
+        position: absolute;
+        left: 45%;
+        top: 1%
+    }
+
+    .flavoursImage {
+        width: 100%;
+    }
+
     
+
+
+}
+
+@media all and (max-width: 768px) {
+    .navContents li a { 
+        padding: 10px;
+    }
+
+    .locations, .time, .subscribeSection {
+        font-size: 1.8rem;
+        margin-top: 5%;
+        width: auto;
+        margin-right: 30px;
+    }
+
+    .subscribeSection input{
+        height: auto;
+        width: 90%;
+        font-size: 1.6rem;
+        margin-top: 25px;
+    }
+
+    .subscribeSection input::placeholder {
+        font-size: 1.6rem;
+    }
+
+    .footerTitle {
+        font-size: 2.2rem;
+    }
+
+    .subscribeBtn {
+        width: auto;
+        margin-top: 25px;
+
+    }
+
+    .size2, size1 {
+        width: 60%;
+    }
+
+    .themeButton {
+        height: auto;
+        font-size: 1.8rem;
+        width: inherit;
+    }
+
+    .fourthAd span {
+        left: 50%;
+        font-size: 2.5rem;
+    }
+
+    .comingSoon {
+        height: 4rem;
+
+    }
+
+    .flavoursImage {
+        height: auto;
+    }
+
+    .innerText {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .headingTitle {
+        font-size: 2rem;
+    }
+
+    .rightSection {
+        width: 70%;
+        margin-left: 20px;
+        padding: 40px 0;
+    }
+
+    .iconImage {
+        height: 5rem;
+        padding: 60px 0 0 30px;
+    }
+
+    .equalDiv {
+        height: auto;
+        padding: 30px;
+    }
+
+    .sectionText {
+        font-size: 1.5rem;
+        font-family: Quite good;
+        width: 100%;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
 
 
 }
