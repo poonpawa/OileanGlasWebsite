@@ -1,0 +1,497 @@
+body, ul{
+    margin: 0;
+}
+
+.rootContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.topDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-color: #ECCFD8;
+    width: auto;
+    z-index: 0;
+}
+
+.logoTop {
+    padding: 15px;
+    z-index: 0;
+}
+
+.logo {
+    padding: 10px;
+    z-index: 0;
+}   
+
+nav {
+    background-color: #1C2253;
+    height: 95px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.mob {
+    display: none;
+}
+
+.navContents {
+    font-size: 50px;
+    font-family: Inedita;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;   
+}
+
+.navContents .active {
+    background-color: #83D7D0;
+    border-radius: 40px;
+    height: 65px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.logoNav {
+    order: 0;
+}
+
+.item {
+    order: 1;
+}
+
+.menuBtn ,.closeBtn{
+    order: 2;
+    padding: 20px;
+}
+
+.navContents li a {
+    padding: 70px;
+    text-decoration: none;
+    color: #FF2965;
+}
+
+.firstPhotoSection {
+    height: 798px;
+}
+
+.firstPhotoSection img {
+    z-index: -1;
+    top: -10px;
+    width: 100%;
+}
+
+.secondServicesSection {
+    height: 570px;
+    z-index: 0;
+    background-color: #1C2253;
+    display: flex;
+}
+.onlineShop {
+    display: flex;
+    flex: 1;
+}
+
+.caterEvents {
+    display: flex;
+    flex: 1;
+}
+
+.iconImage {
+    height: 15rem;
+    padding: 134px 0 0 100px;
+    
+}
+
+.rightSection {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0px;
+    margin-left: 50px;
+}
+
+.themeButton {
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    height: 66px;
+    font-family: Inedita;
+    font-size: 54px;
+    border-radius: 40px;
+    flex: none;
+}
+
+.button1 {
+    background-color: #ECCFD8;
+    color: #1C2253;
+}
+
+.button2 {
+    background-color: #1C2253;
+    color: white;
+}
+
+.size1 {
+    width: 224px;
+}
+
+.size2 {
+    width: 342px;
+}
+
+.theme1 {
+    background-color: #ECCFD8;
+}
+
+.theme2 {
+    background-color: #83D7D0;
+}
+
+.theme3 {
+    background-color: #1C2253;
+}
+
+.thirdPromo .headingTitle, .thirdPromo .innerText, .fourthAd .headingTitle  {
+    color: #1C2253;
+}
+
+.flavoursImage {
+    width: 828px;
+    height: 656px;
+}
+
+.headingTitle {
+    font-family: Inedita;
+    font-size: 68px;
+    color: #83D7D0;
+    margin-right: auto;
+    flex: 1;
+}
+
+.innerText {
+    font-family: Quite Good;
+    font-size: 54px; 
+    color: #FF2965;
+    width: 434px;
+    margin-right: auto;
+    flex: 2;
+}
+
+.thirdPromo, .fourthAd, footer{
+    display: flex;
+}
+
+.fourthAd{
+    justify-content: space-between;
+}
+
+.comingSoon {
+    align-self: center;
+}
+
+.fourthAd span {
+    font-family: Inedita;
+    font-size: 100px;
+    align-self: center;
+    color: #1C2253;
+}
+
+footer {
+    height: 563px;
+    padding: 70px 0 0 93px;
+}
+
+.footerTitle {
+    font-family: Inedita;
+    font-size: 68px;
+    color: #FF2965;
+}
+
+.locations, .time, .subscribeSection  {
+    font-family: Quite Good;
+    font-size: 56px;
+    color: #ECCFD8;
+    width: 470px;
+    margin-right: 130px;
+}
+
+.subscribeBtn {
+    color: #534D4E;
+    margin-top: 35px;
+    background-color: #ECCFD8;
+}
+
+.subscribeSection .footerTitle {
+    color: #ECCFD8;
+}
+
+.subscribeSection input::placeholder {
+    color:  #534D4E;
+    font-size: 51px;
+    font-family: Quite Good;
+    text-indent: 25px;
+    opacity: 75%;
+}
+
+.subscribeSection input {
+    border-radius: 40px;
+    width: 500px;
+    height: 66px;
+    background-color: #ECCFD8;
+    margin-top: 35px;
+    font-family: Quite Good;
+    font-size: 51px;
+    color:  #534D4E;  
+}
+
+.equalDiv {
+    height: 934px;
+    padding: 30px;
+}
+
+.title {
+    font-size: 5rem;
+    font-family: Inedita;
+}
+
+.sectionText {
+    font-size: 2.5rem;
+    font-family: Quite good;
+    width: 50%;
+    margin-top: 2%;
+}
+
+.missionSection, .teamSection {
+    align-items: flex-end;
+    color: #1C2253;
+    display: flex;
+    flex-direction: column;
+}
+
+.journeySection {
+    align-items: flex-start;
+    color: #ECCFD8;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+@media all and (max-width: 1350px) {
+    
+    .navContents {
+        flex-direction: column;
+        display: flex;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .open {
+        display: flex;
+        opacity: 1; 
+        transform: translateY(0);
+        z-index: 0;
+        transition: all 0.6s ease-in-out;
+    }
+
+    .item {
+        border-width: 4px;
+        border-color: #83D7D0;
+    }
+
+    nav {
+        height: 300px;
+        opacity: 0;
+        justify-content: space-around;
+        transform: translateY(-80%);
+        z-index: -1;
+        display: none;
+    }
+
+    .topDiv {
+        justify-content: space-between;
+        height: 150px;
+    }
+
+    .logoTop img {
+        width: 180px;
+        height: 120px;
+    }
+
+    .firstPhotoSection {
+        height: auto;
+    }
+
+    footer {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        font-size: 2rem;
+        height: auto;
+        padding: 70px 0 40px 93px;
+    }
+
+    .locations, .time, .subscribeSection {
+        font-size: 2.8rem;
+        margin-top: 5%;
+        width: auto;
+    }
+
+    .secondServicesSection {
+        width: auto;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .rightSection {
+        padding: 50px 0px;
+
+    }
+
+    .headingTitle {
+        font-size: 3rem;
+    }
+
+    .innerText {
+        font-size: 2.5rem;
+    }
+
+    .iconImage {
+        height: 10rem;
+        padding: 80px 0 0 80px;
+    }
+
+    .thirdPromo img {
+        display: none;
+    }
+
+    .fourthAd {
+        display: inline-flex;
+        position: relative;
+    }
+
+    .comingSoon {
+        position: absolute;
+        top: 75%;
+        right: 5%;
+        height: 10rem;
+    }
+
+    .fourthAd span {
+        position: absolute;
+        left: 45%;
+        top: 1%
+    }
+
+    .flavoursImage {
+        width: 100%;
+    }
+
+    
+
+
+}
+
+@media all and (max-width: 768px) {
+    .navContents li a { 
+        padding: 10px;
+    }
+
+    .locations, .time, .subscribeSection {
+        font-size: 1.8rem;
+        margin-top: 5%;
+        width: auto;
+        margin-right: 30px;
+    }
+
+    .subscribeSection input{
+        height: auto;
+        width: 90%;
+        font-size: 1.6rem;
+        margin-top: 25px;
+    }
+
+    .subscribeSection input::placeholder {
+        font-size: 1.6rem;
+    }
+
+    .footerTitle {
+        font-size: 2.2rem;
+    }
+
+    .subscribeBtn {
+        width: auto;
+        margin-top: 25px;
+
+    }
+
+    .size2, size1 {
+        width: 60%;
+    }
+
+    .themeButton {
+        height: auto;
+        font-size: 1.8rem;
+        width: inherit;
+    }
+
+    .fourthAd span {
+        left: 50%;
+        font-size: 2.5rem;
+    }
+
+    .comingSoon {
+        height: 4rem;
+
+    }
+
+    .flavoursImage {
+        height: auto;
+    }
+
+    .innerText {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .headingTitle {
+        font-size: 2rem;
+    }
+
+    .rightSection {
+        width: 70%;
+        margin-left: 20px;
+        padding: 40px 0;
+    }
+
+    .iconImage {
+        height: 5rem;
+        padding: 60px 0 0 30px;
+    }
+
+    .equalDiv {
+        height: auto;
+        padding: 30px;
+    }
+
+    .sectionText {
+        font-size: 1.5rem;
+        font-family: Quite good;
+        width: 100%;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+
+}
