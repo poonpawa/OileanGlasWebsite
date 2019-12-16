@@ -1,3 +1,12 @@
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100vh;
+    margin : 0;
+}
+
 body, ul{
     margin: 0;
 }
@@ -109,7 +118,7 @@ ul {
     
 }
 
-.rightSection {
+.rightDiv {
     display: flex;
     flex-direction: column;
     padding: 100px 0px;
@@ -139,6 +148,16 @@ ul {
     color: white;
 }
 
+.button3 {
+    background-color: #FF2965;
+    color: white;
+}
+
+.button4 {
+    background-color: #83D7D0;
+    color: #1C2253;
+}
+
 .size1 {
     width: 224px;
 }
@@ -157,6 +176,10 @@ ul {
 
 .theme3 {
     background-color: #1C2253;
+}
+
+.theme4  {
+    background-color: #FF2965;
 }
 
 .thirdPromo .headingTitle, .thirdPromo .innerText, .fourthAd .headingTitle  {
@@ -235,17 +258,37 @@ footer {
 
 .subscribeSection input::placeholder {
     color:  #534D4E;
+}
+
+input::placeholder, textarea::placeholder, ::-webkit-datetime-edit { 
+    color: #ECCFD8;
+}
+
+.subscribeSection input::placeholder, input::placeholder, textarea::placeholder,::-webkit-datetime-edit { 
     font-size: 51px;
     font-family: Quite Good;
-    text-indent: 25px;
+    text-indent: 5%;
     opacity: 75%;
 }
 
-.subscribeSection input {
+::-webkit-inner-spin-button {
+    display: none;
+}
+::-webkit-calendar-picker-indicator { 
+    color: #ECCFD8;
+ } 
+
+ input[type=checkbox]::-ms-check {
+    color: #ECCFD8;
+    background: #1C2253;
+    padding: 0.5em;
+}
+
+
+.subscribeSection input, input, textarea{
     border-radius: 40px;
-    width: 500px;
+    width: 80%;
     height: 66px;
-    background-color: #ECCFD8;
     margin-top: 35px;
     font-family: Quite Good;
     font-size: 51px;
@@ -281,6 +324,113 @@ footer {
     color: #ECCFD8;
     display: flex;
     flex-direction: column;
+}
+
+.productsRow1, .productsRow2, .productsRow3 {
+    display: flex;
+}
+
+.productHeading {
+    padding: 2% 0 0 3%;
+    font-family: Inedita;
+    font-size: 4rem;
+    color: #1C2253;
+}
+
+.productsRow3 .longerDiv {
+    height: 750px;
+}
+
+.firstDiv , .secondDiv, .thirdDiv{
+    height: 620px;
+    width: 560px;
+    background-color: #1C2253;
+    border-radius: 15%;
+    margin: 40px 20px 40px 40px;
+    padding: 3%;
+    box-sizing: border-box;
+}
+
+.prodTitle {
+    font-size: 3rem;
+    font-family: Inedita;
+    color: #83D7D0;
+    padding-bottom: inherit;
+}
+
+.prodText {
+    font-size: 2.8rem;
+    font-family: Quite Good;
+    padding-top: 3%;
+    width: 40%;
+    color: #83D7D0;
+}
+
+.pageContent {
+    padding: 3%;
+}
+.productsRow3 img {
+    height: 347px;
+    width: 231px;
+}
+
+.productsRow3 .prodText {
+    float: right;
+}
+
+.form1, .form2, .form3 {
+    display: flex;
+}
+
+.leftSection, .rightSection {
+    padding: 80px;
+    width: 50%;
+}
+
+.form2 .titleSpan, .form2 .textInfo, .form3 .titleSpan, .form3 .textInfo {
+    color: #1C2253;
+}
+
+.form1 .titleSpan, .form1 .textInfo {
+    color: #FF2965;
+}
+
+.textInfo {
+    width: auto;
+}
+
+.form1 {
+    height: 950px;
+}
+
+.form2 {
+    height: 1084px;
+}
+
+.form3 {
+    height: 772px;
+}
+
+#onlineOrder, #caterEvents, #tableService {
+    display: flex;
+    flex-direction: column;
+}
+
+#caterEvents #street, #caterEvents #flatNo, #caterEvents #city, #caterEvents #state {
+    width: 40%;
+}
+
+textarea {
+    height: 150px;
+}
+
+.noFlex {
+    display: flex;
+}
+
+.form1 button, .form2 button, .form3 button {
+    margin-top: 35px;
+    width: 40%;
 }
 
 
@@ -352,7 +502,7 @@ footer {
         height: auto;
     }
 
-    .rightSection {
+    .rightDiv {
         padding: 50px 0px;
 
     }
@@ -396,6 +546,11 @@ footer {
         width: 100%;
     }
 
+    .firstDiv , .secondDiv, .thirdDiv .longerDiv {
+        height: auto;
+        width: auto;
+    }
+
     
 
 
@@ -413,22 +568,36 @@ footer {
         margin-right: 30px;
     }
 
-    .subscribeSection input{
+    .subscribeSection input, input, textarea{
         height: auto;
-        width: 90%;
+        width: 100%;
         font-size: 1.6rem;
         margin-top: 25px;
     }
 
-    .subscribeSection input::placeholder {
+    .subscribeSection input::placeholder, input::placeholder, textarea::placeholder,::-webkit-datetime-edit {
         font-size: 1.6rem;
+        text-indent: 20px;
+    }
+
+    .rightSection, .leftSection {
+        padding: 15px 30px;
+        width: 75%;
+    }
+
+    .leftSection {
+        order: 0;
+    }
+
+    .rightSection {
+        order: 1;
     }
 
     .footerTitle {
         font-size: 2.2rem;
     }
-
-    .subscribeBtn {
+    
+    .subscribeBtn  {
         width: auto;
         margin-top: 25px;
 
@@ -467,7 +636,7 @@ footer {
         font-size: 2rem;
     }
 
-    .rightSection {
+    .rightDiv {
         width: 70%;
         margin-left: 20px;
         padding: 40px 0;
@@ -491,6 +660,59 @@ footer {
 
     .title {
         font-size: 2rem;
+    }
+
+    .productsRow1, .productsRow2, .productsRow3 {
+        flex-direction: column;
+    }
+    .prodTitle {
+        font-size: 1.5rem;
+    }
+
+    .firstDiv , .secondDiv, .thirdDiv{
+        width: 19rem;
+        padding: 10%;
+        margin: 20px;
+        height: auto; 
+    }
+
+    .prodText { 
+        font-size: 1.5rem;
+        padding-top: 5%;
+
+    }
+
+    .productHeading {
+        padding: 3% 0 0 10%;
+        font-size: 2rem;
+    }
+
+    .pageContent img {
+        width: 10rem;
+        height: 8rem;
+    }
+
+    .productsRow3 .prodText {
+        float: left;
+    }
+
+    .productsRow3 .longerDiv {
+        height: auto;
+    }
+
+    .form1, .form3 {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .form2 {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        height: auto;
+    }
+
+    #caterEvents #street, #caterEvents #flatNo, #caterEvents #city, #caterEvents #state {
+        width: 50%;
     }
 
 
