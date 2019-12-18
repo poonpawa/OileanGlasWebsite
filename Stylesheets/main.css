@@ -80,10 +80,21 @@ ul {
     padding: 20px;
 }
 
+.menuBtn:hover, .closeBtn:hover {
+    cursor: pointer;
+    border-radius: 5%;
+}
+
 .navContents li a {
     padding: 70px;
     text-decoration: none;
     color: #FF2965;
+    transition-duration: 0.4s;
+}
+
+.navContents li a:hover {
+    cursor: pointer;
+    color: #ECCFD8;
 }
 
 .firstPhotoSection {
@@ -125,6 +136,7 @@ ul {
     margin-left: 50px;
 }
 
+/* all the button styling here */
 .themeButton {
     border: none;
     text-align: center;
@@ -136,6 +148,7 @@ ul {
     font-size: 54px;
     border-radius: 40px;
     flex: none;
+    transition-duration: 0.4s;
 }
 
 .button1 {
@@ -143,9 +156,17 @@ ul {
     color: #1C2253;
 }
 
+.button1:hover {
+    background-color:#83D7D0
+}
+
 .button2 {
     background-color: #1C2253;
     color: white;
+}
+
+.button2:hover {
+    background-color: #FF2965;
 }
 
 .button3 {
@@ -153,11 +174,20 @@ ul {
     color: white;
 }
 
-.button4 {
-    background-color: #83D7D0;
-    color: #1C2253;
+.button3:hover {
+    background-color: #1C2253;
 }
 
+.button4 {
+    background-color: #1C2253;
+    color: #FF2965;
+}
+
+.button4:hover {
+    background-color: #83D7D0;
+}
+
+/* Various sizes and background themes */
 .size1 {
     width: 224px;
 }
@@ -252,12 +282,20 @@ footer {
     background-color: #ECCFD8;
 }
 
+.subscribeBtnHover {
+    background-color: #83D7D0;
+    color: #1C2253;
+}
+
 .subscribeSection .footerTitle {
     color: #ECCFD8;
 }
 
+/* Input sections of the form all over the site */
+
 .subscribeSection input::placeholder {
     color:  #534D4E;
+    
 }
 
 input::placeholder, textarea::placeholder, ::-webkit-datetime-edit { 
@@ -267,7 +305,6 @@ input::placeholder, textarea::placeholder, ::-webkit-datetime-edit {
 .subscribeSection input::placeholder, input::placeholder, textarea::placeholder,::-webkit-datetime-edit { 
     font-size: 51px;
     font-family: Quite Good;
-    text-indent: 5%;
     opacity: 75%;
 }
 
@@ -276,24 +313,123 @@ input::placeholder, textarea::placeholder, ::-webkit-datetime-edit {
 }
 ::-webkit-calendar-picker-indicator { 
     color: #ECCFD8;
- } 
+ }
 
- input[type=checkbox]::-ms-check {
-    color: #ECCFD8;
-    background: #1C2253;
-    padding: 0.5em;
+/* checkbox custom css styling */
+
+.customCheckbox {
+    display: flex;
+    color: #1C2253;
 }
 
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-evenly;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 55px;
+    width: 50px;
+    background-color: #1C2253;
+    border-radius: 3px;
+  }
 
-.subscribeSection input, input, textarea{
+  /* When the checkbox is checked, add a background */
+.container input:checked ~ .checkmark {
+    background-color:#1C2253;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 40%;
+    top: 5%;
+    width: 15%;
+    height: 70%;
+    border: 4px solid #ECCFD8;
+    opacity: 80%;
+    border-width: 0 6px 6px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+.subscribeSection input, input, textarea, .container, .customDropdown{
     border-radius: 40px;
     width: 80%;
     height: 66px;
     margin-top: 35px;
     font-family: Quite Good;
-    font-size: 51px;
-    color:  #534D4E;  
+    font-size: 51px; 
+    padding-left: 4%;
 }
+
+.subscribeSection input {
+    color: #534D4E;
+}
+
+.form1 input, .form2 input, textarea, .form3 input {
+    color: #ECCFD8;
+    
+}
+
+.form1 input, .form3 input {
+    border: #1C2253;
+}
+
+.form2 input, textarea {
+    border: #FF2965;
+}
+
+/* Adding custom Styles for Css */
+
+.customDropdown{
+    position: relative;
+    text-indent: 5%;
+    color: #ECCFD8;
+    width: 30%;
+}
+
+.quantity {
+    font-family: Quite Good;
+    font-size: 51px;
+    color: #1C2253;
+}
+
 
 .equalDiv {
     height: 934px;
@@ -308,22 +444,25 @@ input::placeholder, textarea::placeholder, ::-webkit-datetime-edit {
 .sectionText {
     font-size: 2.5rem;
     font-family: Quite good;
-    width: 50%;
     margin-top: 2%;
 }
 
 .missionSection, .teamSection {
-    align-items: flex-end;
-    color: #1C2253;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    color: #1C2253;
 }
 
+.missionSection img, .teamSection img, .journeySection img {
+    width: 630px;
+    height: 500px;
+    margin: 20%;
+
+}
 .journeySection {
-    align-items: flex-start;
     color: #ECCFD8;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
 }
 
 .productsRow1, .productsRow2, .productsRow3 {
@@ -426,6 +565,8 @@ textarea {
 
 .noFlex {
     display: flex;
+    width: 80%;
+    justify-content: space-between;
 }
 
 .form1 button, .form2 button, .form3 button {
@@ -433,13 +574,71 @@ textarea {
     width: 40%;
 }
 
+.customRadio {
+    display: flex;
+}
 
+.customRadio input {
+    width: 2.5rem;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+.customRadio span {
+    margin-top: 35px;
+}
+
+.errorShadow {
+    -webkit-box-shadow: 6px 6px 3px -1px rgba(255,0,0,1);
+    -moz-box-shadow: 6px 6px 3px -1px rgba(255,0,0,1);
+    box-shadow: 6px 6px 3px -1px rgba(255,0,0,1);
+}
+
+.resDiv, .resDiv1, .resDiv2, .resDiv3{
+    font-size: 1.5rem;
+    height: 10%;
+    font-family: Quite Good;
+    margin-top: 5%;
+}
+
+.wrong {
+    color: red;
+}
+
+.validForm {
+    color: green;
+}
+
+.divider {
+    background-color: #1C2253;
+    height: 5px;
+    display: none;
+}
+
+.fixed-nav {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
 
 @media all and (max-width: 1350px) {
+
+    .navContents li a { 
+        padding: 2px;
+        font-size: 2.5rem;
+    }
     
     .navContents {
         flex-direction: column;
         display: flex;
+        width: 100%;
+        align-items: center;
+        padding: 2%;
+        /* transition: all 1s ease-in-out; */
+    }
+
+    .divider {
+        display: block;
     }
 
     .logo {
@@ -451,12 +650,13 @@ textarea {
         opacity: 1; 
         transform: translateY(0);
         z-index: 0;
-        transition: all 0.6s ease-in-out;
     }
 
     .item {
         border-width: 4px;
         border-color: #83D7D0;
+        width: 100%;
+        text-align: center;
     }
 
     nav {
@@ -466,16 +666,16 @@ textarea {
         transform: translateY(-80%);
         z-index: -1;
         display: none;
+        transition: transform 1s ease-in-out;
     }
 
     .topDiv {
         justify-content: space-between;
-        height: 150px;
+        height: 110px;
     }
 
     .logoTop img {
-        width: 180px;
-        height: 120px;
+        width: 7rem;
     }
 
     .firstPhotoSection {
@@ -487,7 +687,7 @@ textarea {
         flex-wrap: nowrap;
         font-size: 2rem;
         height: auto;
-        padding: 70px 0 40px 93px;
+        padding: 40px;
     }
 
     .locations, .time, .subscribeSection {
@@ -549,35 +749,91 @@ textarea {
     .firstDiv , .secondDiv, .thirdDiv .longerDiv {
         height: auto;
         width: auto;
+    } 
+    
+    .mob {
+        display: block;
+    } 
+
+    .close {
+        display: none;
     }
 
+    .subscribeSection .customRadio input {
+        width: 2.5rem;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
     
+    .customRadio span {
+        margin-top: 25px;
+    }
+
+    .missionSection .leftSection, .teamSection .leftSection, .journeySection .rightSection {
+        display: none;
+    }
 
 
 }
 
 @media all and (max-width: 768px) {
-    .navContents li a { 
-        padding: 10px;
-    }
+   
 
     .locations, .time, .subscribeSection {
-        font-size: 1.8rem;
+        font-size: 1.3rem;
         margin-top: 5%;
-        width: auto;
-        margin-right: 30px;
+        margin-right: 20px;
     }
 
-    .subscribeSection input, input, textarea{
+    .subscribeSection input, input, textarea, .container{
         height: auto;
         width: 100%;
         font-size: 1.6rem;
         margin-top: 25px;
     }
 
+    footer .noFlex {
+        width: 112%;
+    }
+
+    textarea {
+        padding-left: 6%;
+        padding-top: 3%;
+    }
+
+    .customDropdown, .quantity {
+        font-size: 1.6rem;
+        height: auto;
+        width: auto;
+    }
+
+    .container {
+        margin-right: 4%;
+    }
+
     .subscribeSection input::placeholder, input::placeholder, textarea::placeholder,::-webkit-datetime-edit {
         font-size: 1.6rem;
-        text-indent: 20px;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 1.6rem;
+        width: 1.5rem;
+        background-color: #1C2253;
+        border-radius: 3px;
+    }
+
+    .checkBoxDiv {
+        padding-left: 15px;
+    }
+
+    .container .checkmark:after {
+        top: 3%;
+        width: 13%;
+        height: 60%;
+        border-width: 0 4px 4px 0;
     }
 
     .rightSection, .leftSection {
@@ -605,6 +861,16 @@ textarea {
 
     .size2, size1 {
         width: 60%;
+    }
+
+    .thirdPromo .themeButton {
+        width: 60%;
+        margin-top: 2%;
+    }
+
+    .secondServicesSection .themeButton {
+        width: 45%;
+        margin-top: 2%;
     }
 
     .themeButton {
@@ -715,5 +981,6 @@ textarea {
         width: 50%;
     }
 
+    
 
 }

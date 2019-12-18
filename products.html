@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Oilean Glas Website</title>
     <link rel="stylesheet" href="./Stylesheets/main.css">
+    <link rel="icon" type="image/x-icon" href="./Images/FavIcon-01.ico"/>
 </head>
 <body>
     <div class="rootContainer">
@@ -14,12 +15,14 @@
             <div class="logoTop">
                 <img src="./Images/Logo.png" alt="Oilean Glas Logo">
             </div>
-            <div class="menuBtn mob"><img src="./Images/Menu Button.png" alt="Menu button"></div>
-            <div class="closeBtn mob"><img src="./Images/Close_Button.png" alt="Close button"></div>
+            <span class="mob">
+                <div class="menuBtn"><img src="./Images/Menu Button.png" alt="Menu button"></div>
+                <div class="closeBtn close"><img src="./Images/Close_Button.png" alt="Close button"></div>
+            </span>
         </div>
     </header>
-
-    <nav>
+    <div class="divider"></div>
+    <nav id="NavBar">
         <ul class="navContents">
             <li class="item"><a href="./index.html">Home</a></li>
             <li class="item"><a href="./aboutUs.html">About Us</a></li>
@@ -35,7 +38,7 @@
         <div class="productsRow1 ">  
             <div class="firstDiv">
                 <div class="prodTitle">Peppermint</div> 
-                <img src="./Images/PeppermintIcecream.jpg" alt="Peppermint flavour icecream" width="186" height="248">
+                <img src="./Images/PeppermintIcecream.jpg" alt="Peppermint flavour icecream" width="250" height="248">
                 <div class="prodText">Juicy,
                     Flavourful,
                     mango candy
@@ -43,7 +46,7 @@
             </div>  
             <div class="secondDiv">
                 <div class="prodTitle">Melon</div> 
-                <img src="./Images/PeppermintIcecream.jpg" alt="Peppermint flavour icecream" width="186" height="248">
+                <img src="./Images/Melon.jpg" alt="Peppermint flavour icecream" width="250" height="248">
                 <div class="prodText">Juicy,
                     Flavourful,
                     mango candy
@@ -51,7 +54,7 @@
             </div>  
             <div class="thirdDiv">
                 <div class="prodTitle">Cookie and Cream</div> 
-                <img src="./Images/PeppermintIcecream.jpg" alt="Peppermint flavour icecream" width="186" height="248">
+                <img src="./Images/cookies&cream.jpg" alt="Peppermint flavour icecream" width="250" height="248">
                 <div class="prodText">Juicy,
                     Flavourful,
                     mango candy
@@ -62,7 +65,7 @@
         <div class="productsRow2"> 
             <div class="firstDiv">
                 <div class="prodTitle">Strawberry</div> 
-                <img src="./Images/PeppermintIcecream.jpg" alt="Peppermint flavour icecream" width="186" height="248">
+                <img src="./Images/strawberry.jpg" alt="Peppermint flavour icecream" width="250" height="248">
                 <div class="prodText">Juicy,
                     Flavourful,
                     mango candy
@@ -70,7 +73,7 @@
             </div>  
             <div class="secondDiv">
                 <div class="prodTitle">Classic Vanilla</div> 
-                <img src="./Images/PeppermintIcecream.jpg" alt="Peppermint flavour icecream" width="186" height="248">
+                <img src="./Images/Vanilla.jpg" alt="Peppermint flavour icecream" width="250" height="248">
                 <div class="prodText">Juicy,
                     Flavourful,
                     mango candy
@@ -78,7 +81,7 @@
             </div>  
             <div class="thirdDiv">
                 <div class="prodTitle">Chocolate</div> 
-                <img src="./Images/PeppermintIcecream.jpg" alt="Peppermint flavour icecream" width="186" height="248">
+                <img src="./Images/Chocolcate.jpg" alt="Peppermint flavour icecream" width="250" height="248">
                 <div class="prodText">Juicy,
                     Flavourful,
                     mango candy
@@ -128,25 +131,36 @@
 
     </div>
 
-    <footer class="theme3"> 
-        <div class="locations">
-            <div class="footerTitle">Locations</div>
-            <div>O'Coonell Street 
-                    Upper, 0948372718</div><br>
-            <div>Grafton Street 
-                    0928482837</div>
-        </div>
-        <div class="time">
-            <div class="footerTitle">Opening Hours</div>
-            <div>MON - THU  2 PM-10 PM
-                FRI - SUN  1 PM-10 PM</div><br>
-            <div>MON - THU  2 PM-10 PM
-                FRI - SUN  1 PM-10 PM</div>
+    <footer class="theme3">
+        <div class="noFlex">  
+            <div class="locations">
+                <div class="footerTitle">Locations</div>
+                <div>O'Coonell Street 
+                        Upper, 0948372718</div><br>
+                <div>Grafton Street 
+                        0928482837</div>
+            </div>
+            <div class="time">
+                <div class="footerTitle">Opening Hours</div>
+                <div>MON - THU  2 PM-10 PM,
+                    FRI - SUN  1 PM-10 PM</div><br>
+                <div>MON - THU  2 PM-10 PM,
+                    FRI - SUN  1 PM-10 PM</div>
+            </div>
         </div>
         <div class="subscribeSection">
             <div class="footerTitle">Mailing List</div>
-            <input type="text" placeholder="Email Address"><br>
-            <button class="themeButton subscribeBtn size2">Subscribe</button>
+            <form>
+                <input type="email" placeholder="Email" name="Email" class="theme1" required><br>
+                <div class="customRadio">
+                    <input type="radio" name="daily" value="daily" checked> 
+                    <span>Daily</span> 
+                    <input type="radio" name="weekly" value="weekly"> 
+                    <span>Weekly</span> <br>
+                </div>
+                <button class="themeButton subscribeBtn size2">Subscribe</button>
+                <div class="resDiv3"></div>
+            </form>
         </div>
     </footer>
 

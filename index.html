@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Oilean Glas Website</title>
     <link rel="stylesheet" href="./Stylesheets/main.css">
+    <link rel="icon" type="image/x-icon" href="./Images/FavIcon-01.ico"/>
 </head>
 <body>
     <div class="rootContainer">
@@ -14,12 +15,14 @@
             <div class="logoTop">
                 <img src="./Images/Logo.png" alt="Oilean Glas Logo">
             </div>
-            <div class="menuBtn mob"><img src="./Images/Menu Button.png" alt="Menu button"></div>
-            <div class="closeBtn mob"><img src="./Images/Close_Button.png" alt="Close button"></div>
+            <span class="mob">
+                <div class="menuBtn"><img src="./Images/Menu Button.png" alt="Menu button"></div>
+                <div class="closeBtn close"><img src="./Images/Close_Button.png" alt="Close button"></div>
+            </span>
         </div>
     </header>
-
-    <nav>
+    <div class="divider"></div>
+    <nav id="NavBar">
         <ul class="navContents">
             <li class="item active"><a href="./index.html">Home</a></li>
             <li class="item"><a href="./aboutUs.html">About Us</a></li>
@@ -40,7 +43,7 @@
             <div class="rightDiv">
                 <div class="headingTitle">Online Ordering</div>    
                 <div class="innerText">Delivery at your door step, just add flavours to cart & enjoy the creaminess</div>  
-                <button class="themeButton button1 size1">Order</button> 
+                <button class="themeButton button1 size1" onclick='location.href="./services.html"'>Order</button> 
             </div> 
         </div>
         <div class="caterEvents">
@@ -48,7 +51,7 @@
             <div class="rightDiv">
                 <div class="headingTitle">Catering Events</div>    
                 <div class="innerText">Have Party Wedding, Cooperate party or restaurant's bulk supply, we cater to all </div>  
-                <button class="themeButton button1 size1">Book</button>
+                <button class="themeButton button1 size1" onclick='location.href="./services.html"'>Book</button>
             </div>
         </div>
     </div>
@@ -70,24 +73,35 @@
     </div>
 
     <footer class="theme3"> 
-        <div class="locations">
-            <div class="footerTitle">Locations</div>
-            <div>O'Coonell Street<br> 
-                    Upper, 0948372718</div><br>
-            <div>Grafton Street <br>
-                    0928482837</div>
-        </div>
-        <div class="time">
-            <div class="footerTitle">Opening Hours</div>
-            <div>MON - THU  2 PM-10 PM
-                FRI - SUN  1 PM-10 PM</div><br>
-            <div>MON - THU  2 PM-10 PM
-                FRI - SUN  1 PM-10 PM</div>
+        <div class="noFlex">  
+            <div class="locations">
+                <div class="footerTitle">Locations</div>
+                <div>O'Coonell Street 
+                        Upper, 0948372718</div><br>
+                <div>Grafton Street 
+                        0928482837</div>
+            </div>
+            <div class="time">
+                <div class="footerTitle">Opening Hours</div>
+                <div>MON - THU  2 PM-10 PM,
+                    FRI - SUN  1 PM-10 PM</div><br>
+                <div>MON - THU  2 PM-10 PM,
+                    FRI - SUN  1 PM-10 PM</div>
+            </div>
         </div>
         <div class="subscribeSection">
             <div class="footerTitle">Mailing List</div>
-            <input type="text" placeholder="Email Address"><br>
-            <button class="themeButton subscribeBtn size2">Subscribe</button>
+            <form>
+                <input type="email" placeholder="Email" name="Email" class="theme1" required><br>
+                <div class="customRadio">
+                    <input type="radio" name="daily" value="daily" checked> 
+                    <span>Daily</span> 
+                    <input type="radio" name="weekly" value="weekly"> 
+                    <span>Weekly</span> <br>
+                </div>
+                <button class="themeButton subscribeBtn size2">Subscribe</button>
+                <div class="resDiv3"></div>
+            </form>
         </div>
     </footer>
 

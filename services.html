@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Oilean Glas Website</title>
     <link rel="stylesheet" href="./Stylesheets/main.css">
+    <link rel="icon" type="image/x-icon" href="./Images/FavIcon-01.ico"/>
 </head>
 <body>
     <div class="rootContainer">
@@ -14,12 +15,14 @@
             <div class="logoTop">
                 <img src="./Images/Logo.png" alt="Oilean Glas Logo">
             </div>
-            <div class="menuBtn mob"><img src="./Images/Menu Button.png" alt="Menu button"></div>
-            <div class="closeBtn mob"><img src="./Images/Close_Button.png" alt="Close button"></div>
+            <span class="mob">
+                <div class="menuBtn"><img src="./Images/Menu Button.png" alt="Menu button"></div>
+                <div class="closeBtn close"><img src="./Images/Close_Button.png" alt="Close button"></div>
+            </span>
         </div>
     </header>
-
-    <nav>
+    <div class="divider"></div>
+    <nav id="NavBar">
         <ul class="navContents">
             <li class="item"><a href="./index.html">Home</a></li>
             <li class="item"><a href="./aboutUs.html">About Us</a></li>
@@ -40,21 +43,39 @@
         </div>
         <div class="rightSection">
             <form id="onlineOrder">
-                <input type="text" class="theme3" name="name" placeholder="Name">
-                <input type="text" class="theme3" name="email" placeholder="Email">
-                <input type="checkbox" class="theme3" name="Strawberry" id="strawberry">Strawberry
-                <input type="checkbox" class="theme3" name="Chocolate" id="chocolate">Chocolate
-                <input type="checkbox" class="theme3" name="Vanilla" id="vanilla">Vanilla
-                <select name="Quantity" class="theme3" id="quantity">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select><br>
-                <input type="tel" class="theme3" name="Telephone" id="telephone" placeholder="phone number">
-            <button class="themeButton button3">Order Now</button>
+                <input type="text" class="theme3 name" name="name" placeholder="Name" required>
+                <input type="text" class="theme3 email" name="email" placeholder="Email" required>
+                <div class="customCheckbox">
+                    <label class="container">
+                        <div class="checkBoxDiv">Strawberry</div> 
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                        <div class="checkBoxDiv"> Chocolate</div>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                        <div class="checkBoxDiv">Vanilla</div>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="quantity">
+                    Quantity :  
+                    <select name="Quantity" class="customDropdown theme3"> 
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div><br>
+                <input type="phone" class="theme3 phone" name="Telephone" placeholder="Phone number" required>
+            <button class="themeButton button2">Order Now</button>
             </form>
+            <div class="resDiv"></div>
         </div>
         
     </div>
@@ -62,20 +83,21 @@
     <div class="form2 theme2"> 
         <div class="leftSection">
             <form id="caterEvents">
-                <input type="text" class="theme4" name="name" placeholder="Name"><br>
-                <input type="text" class="theme4" name="email" placeholder="Email"><br>
-                <input type="tel"  class="theme4" name="Telephone" id="telephone" placeholder="Phone number">
+                <input type="text" class="theme4" name="name" placeholder="Name" required><br>
+                <input type="email" class="theme4" name="email" placeholder="Email" required><br>
+                <input type="tel"  class="theme4" name="Telephone" id="telephone" minlength="10" required pattern="[0-9]{10}" placeholder="Phone number">
                 <div class="noFlex">
                     <input type="text" class="theme4" name="Street" id="street" placeholder="Street">
                     <input type="text" class="theme4" name="FlatNo" id="flatNo" placeholder="Apt/Floor No">
                 </div>    
                 <div class="noFlex">
-                    <input type="text" class="theme4" name="City" id="city" placeholder="City">
-                    <input type="text" class="theme4" name="State" id="state" placeholder="State"><br>
+                    <input type="text" class="theme4" name="City" id="city" placeholder="City" required>
+                    <input type="text" class="theme4" name="State" id="state" placeholder="State" required>
                 </div>
                 
                 <textarea class="theme4" name="Message" id="message" cols="20" rows="10" placeholder="Message"></textarea>
-                <button class="themeButton button2">Book Now</button>
+                <button class="themeButton button3">Book Now</button>
+                <div class="resDiv1"></div>
             </form>
         </div>
         <div class="rightSection">
@@ -99,40 +121,52 @@
         </div>
         <div class="rightSection">
             <form id="tableService">
-                <input type="text" class="theme3" name="name" placeholder="Name"><br>
-                <input type="text" class="theme3" name="Address" placeholder="Email"><br>
-                <input type="date" class="theme3" name="date" id="date" placeholder="Event Date">
+                <input type="text" class="theme3" name="name" placeholder="Name" required><br>
+                <input type="email" class="theme3" name="Email" placeholder="Email" required><br>
+                <input type="date" class="theme3" name="date" id="date" placeholder="Event Date" required>
                 <button class="themeButton button4">Submit Enquiry</button>
+                <div class="resDiv2"></div>
             </form>
         </div>
     </div>
 
-    <footer class="theme3"> 
-        <div class="locations">
-            <div class="footerTitle">Locations</div>
-            <div>O'Coonell Street 
-                    Upper, 0948372718</div><br>
-            <div>Grafton Street 
-                    0928482837</div>
-        </div>
-        <div class="time">
-            <div class="footerTitle">Opening Hours</div>
-            <div>MON - THU  2 PM-10 PM
-                FRI - SUN  1 PM-10 PM</div><br>
-            <div>MON - THU  2 PM-10 PM
-                FRI - SUN  1 PM-10 PM</div>
+    <footer class="theme3">
+        <div class="noFlex"> 
+            <div class="locations">
+                <div class="footerTitle">Locations</div>
+                <div>O'Coonell Street 
+                        Upper, 0948372718</div><br>
+                <div>Grafton Street 
+                        0928482837</div>
+            </div>
+            <div class="time">
+                <div class="footerTitle">Opening Hours</div>
+                <div>MON - THU  2 PM-10 PM,
+                    FRI - SUN  1 PM-10 PM</div><br>
+                <div>MON - THU  2 PM-10 PM,
+                    FRI - SUN  1 PM-10 PM</div>
+            </div>
         </div>
         <div class="subscribeSection">
             <div class="footerTitle">Mailing List</div>
-            <input type="text" placeholder="Email Address" class="theme1"><br>
-            <button class="themeButton subscribeBtn size2">Subscribe</button>
+            <form>
+                <input type="email" placeholder="Email" name="Email" class="theme1" required><br>
+                <div class="customRadio">
+                    <input type="radio" name="daily" value="daily" checked> 
+                    <span>Daily</span> 
+                    <input type="radio" name="weekly" value="weekly"> 
+                    <span>Weekly</span> <br>
+                </div>
+                <button class="themeButton subscribeBtn size2">Subscribe</button>
+                <div class="resDiv3"></div>
+            </form>
         </div>
     </footer>
 
     </div>
 
     <!--including javascript file-->
-    <script src="./Scripts/index.js"></script>
+    <script src="./Scripts/services.js"></script>
 
 </body>
 </html>
